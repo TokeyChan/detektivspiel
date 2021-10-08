@@ -1,0 +1,29 @@
+{% if player.met_felix %}
+  <div class="img person" id="felix" onclick="location.href='/place/cafe';"></div>
+{% else %}
+  <div class="img silhouette" style="transform: translateX(1027px) translateY(-16px);"></div>
+{% endif %}
+
+{% if player.met_julian %}
+  <div class="img person" id="julian" onclick="location.href='/place/park';"></div>
+{% else %}
+  <div class="img silhouette" style="transform: translateX(1027px) translateY(125px);"></div>
+{% endif %}
+
+{% if player.met_sophia %}
+  <div class="img person" id="sophia" onclick="location.href='/place/old_but_gold';"></div>
+{% else %}
+  <div class="img silhouette" style="transform: translateX(1027px) translateY(261px);"></div>
+{% endif %}
+
+{% if player.met_stripper %}
+  <div class="img person" id="stripper" onclick="location.href='/place/twoinone';"></div>
+{% else %}
+  <div class="img silhouette" style="transform: translateX(1027px) translateY(400px);"></div>
+{% endif %}
+
+{% if player.met_honey %}
+  <div class="img person" id="honey" onclick="location.href='/place/twoinone';"></div>
+{% else %}
+  <div class="img silhouette" style="transform: translateX(1027px) translateY(545px);"></div>
+{% endif %}

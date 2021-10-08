@@ -1,0 +1,71 @@
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="{% static 'game/main.css'%}">
+		<meta name="viewport" content="user-scalable=yes, width=1240">
+		<style media="screen">
+			body {
+				background-color: black;
+			}
+			table {
+				position: absolute;
+				left: 500px;
+				top: 300px;
+				color: white;
+			}
+			#login {
+				position: absolute;
+				left: 610px;
+				top: 400px;
+			}
+			#notiz {
+				position: absolute;
+				left: 400px;
+				top: 500px;
+				color: white;
+				text-align: center;
+			}
+			</style>
+	</head>
+  <body class="stop-scrolling">
+
+	<div id="main_container">
+
+		<div id="wall_top" class="wall"></div>
+		<div id="wall_left" class="wall"></div>
+		<div id="wall_right" class="wall"></div>
+		<div id="wall_bottom" class="wall"></div>
+
+		{% if user.is_authenticated %}
+      You are already looged in.
+    {% else %}
+    <form action="{%url 'auth:check' %}" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="username" value=""></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" value=""></td>
+        </tr>
+      </table>
+      {% if next %}
+    <input type="hidden" name="next" value="{{ next }}">
+      {% endif %}
+    <input type="submit" value="Login" id="login">
+  </form>
+    {% endif %}
+
+	<div id="notiz">
+		Diese Webseite verwendet Cookies und Javascript.<br>
+		Bitte beides ggf. zu enablen. <br>
+		Volle Funktionalität ist leider zur Zeit nur im Firefox-Browser gegeben. <br>
+	</div>
+</div>
+
+</body>
+</html>

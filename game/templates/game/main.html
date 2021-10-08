@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>startpage</title>
+		<link rel="stylesheet" href="{% static 'game/main.css'%}">
+		<meta name="viewport" content="user-scalable=yes, width=1240">
+	</head>
+  <body class="stop-scrolling">
+
+	<div id="main_container">
+		<div id="map_container">
+			<div id="map" class="img">
+				<div id="bank"></div>
+				{% if player.cafe_visitable %}
+				<div id="cafe"></div>
+				{% endif %}
+				{% if player.old_but_gold_visitable %}
+				<div id="old_but_gold"></div>
+				{% endif %}
+
+				{% if player.park_visitable %}
+				<div id="park"></div>
+				{% endif %}
+
+				{% if player.twoinone_visitable %}
+				<div id="twoinone"></div>
+				{% endif %}
+			</div>
+		</div>
+		
+		{% include 'game/item_popup.html' %}
+		{% include 'game/insp_popup.html' %}
+
+		<div id="note_text">Karte</div>
+    <div id="metal" class="img"></div>
+		<div id="note" class="img"></div>
+		<div id="wood" class="img"></div>
+
+		{% if player.item_set.all.0.is_visible %}
+			<div id="knife" class="img"></div>
+		{% endif %}
+
+		{% if player.item_set.all.1.is_visible %}
+	 		<div id="high_heels" class="img"></div>
+		{% endif %}
+
+		{% if player.item_set.all.2.is_visible %}
+			<div id="phone" class="img"></div>
+		{% endif %}
+
+
+		{% if not player.has_finished %}
+	 		<div id="bars" class="img"></div>
+		{% else %}
+			<div id="bars" style="display:none;"></div>
+		{% endif %}
+
+		<div id="wall_top" class="wall"></div>
+		<div id="wall_left" class="wall"></div>
+		<div id="wall_right" class="wall"></div>
+		<div id="wall_bottom" class="wall"></div>
+
+		{% include 'game/people_list.html'%}
+
+</div>
+
+{% for plc in places %}
+<form action="{% url 'game:place' plc.html_id %}">
+	<input id="go_to_{{ plc.html_id }}" type="submit" hidden="true" name="">
+</form>
+{% endfor %}
+
+
+{% if player.met_felix and player.met_sophia and player.met_julian and player.met_stripper and player.met_honey %}
+	<form action="{% url 'game:decision' %}" method="get">
+		<input type="submit" hidden="true" id="decide_submit">
+	</form>
+{% endif %}
+</body>
+<script src="{% static 'game/main.js'%}"></script>
+</html>

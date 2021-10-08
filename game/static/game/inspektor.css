@@ -1,0 +1,110 @@
+
+#insp_popup_background {
+  pointer-events: auto;
+  position: absolute;
+  background-image: url("/static/game/images/popup.png");
+  overflow: visible;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 678px;
+  height: 678px;
+  transform-origin: 50% 50%;
+  transform: translateX(281px) translateY(61px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+#insp_title {
+  pointer-events: auto;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, &quot;Times New Roman&quot;, serif;
+  font-size: 36px;
+  word-wrap: break-word;
+  overflow: visible;
+  text-align: center;
+  width: 572px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: translateX(326px) translateY(99px) rotateY(0deg);
+}
+
+#insp_text {
+  pointer-events: auto;
+  position: absolute;
+  color: rgb(206, 206, 206);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 31px;
+  word-wrap: break-word;
+  width: 325px;
+  height: 489px;
+  transform-origin: 50% 50%;
+  transform: translateX(327px) translateY(195px) rotateY(0deg);
+}
+
+#insp_img {
+  pointer-events: auto;
+  position: absolute;
+  background-image: url("/static/game/images/inspektor.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 329px;
+  height: 474px;
+  transform-origin: 50% 50%;
+  transform: translateX(618px) translateY(236px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+#insp_popup {
+  display: none;
+  z-index: 30;
+  margin: auto;
+  position: absolute;
+  width: 1240px;
+  height: 800px;
+  overflow: hidden;
+  -webkit-transform-style: flat;
+}
+
+.popup_close {
+  position: absolute;
+  cursor: pointer;
+  top: 80px;
+  left: 900px;
+  width: 35px;
+  height: 40px;
+}
+
+
+#insp_text_input {
+  position: absolute;
+  top: 600px;
+  left: 418px;
+  background-color: white;
+  border: none;
+  display: none;
+}
+
+#insp_button_input {
+  display: none;
+  position: absolute;
+  top: 640px;
+  left: 415px;
+  width: 150px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(206, 206, 206);
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  border-color: black;
+}
+#insp_button_input:hover {
+  background-color: rgb(150, 150, 150);
+  cursor: pointer;
+}

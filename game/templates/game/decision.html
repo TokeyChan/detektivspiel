@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+		<title>Decision</title>
+	  <link rel="stylesheet" href=" {% static 'game/decision.css' %}">
+  </head>
+	<body>
+	<div id="main_container" style="margin: auto; position: relative; width: 1240px; height: 800px; overflow: hidden; -webkit-transform-style: flat;" hyp_dn="Decision">
+		<div class="wall" id="wall_left"></div>
+		<div class="wall" id="wall_right"></div>
+		<div class="wall" id="wall_top"></div>
+		<div class="wall" id="wall_bottom"></div>
+
+		<div id="note"></div>
+		<div id="note_text">
+			Zurück
+		</div>
+
+		<div class="dimmer" id="felix_dimmer"></div>
+		<div class="dimmer" id="sophia_dimmer"></div>
+		<div class="dimmer" id="julian_dimmer"></div>
+		<div class="dimmer" id="stripper_dimmer"></div>
+		<div class="dimmer" id="honey_dimmer"></div>
+
+
+		<div class="img" id="felix_img"></div>
+		<div class="img" id="sophia_img"></div>
+		<div class="img" id="julian_img"></div>
+		<div class="img" id="stripper_img"></div>
+		<div class="img" id="honey_img"></div>
+
+
+
+	<div class="bar_container" id="bar_container">
+		<div class="bar"></div>
+		<div class="bar" style="transform: translateX(29px);"></div>
+		<div class="bar" style="transform: translateX(58px);"></div>
+		<div class="bar" style="transform: translateX(85px);"></div>
+		<div class="bar" style="transform: translateX(114px);"></div>
+		<div class="bar" style="transform: translateX(143px);"></div>
+		<div class="bar" style="transform: translateX(172px);"></div>
+		<div class="bar" style="transform: translateX(201px);"></div>
+	</div>
+
+<div  id="button_container" style="pointer-events: auto; position: absolute; overflow: visible; z-index: 36; width: 1143px; height: 59px; transform-origin: 50% 50%; transform: translateX(55px) translateY(678px) rotateY(0deg);">
+	<div class="continue_button" id="felix_button"><br></div>
+	<div class="continue_button" id="sophia_button"><br></div>
+	<div class="continue_button" id="julian_button"><br></div>
+	<div class="continue_button" id="stripper_button"><br></div>
+	<div class="continue_button" id="honey_button"><br></div>
+	</div>
+	{% include 'game/insp_popup.html'%}
+
+</div>
+
+
+
+<a href="/" hidden="true" id="link"></a>
+
+<form id="submit_form" action="{% url 'game:result' %}" method="post">
+	{% csrf_token %}
+</form>
+
+</body>
+<script type="text/javascript" src="{% static 'game/decision.js' %}"></script>
+
+</html>

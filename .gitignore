@@ -1,0 +1,8 @@
+static/**
+*.mp4
+db.sqlite3
+sarah_game_uwsgi.ini
+/__pycache__/**
+__pycache__/**
+__pycache__/
+.DS_Store

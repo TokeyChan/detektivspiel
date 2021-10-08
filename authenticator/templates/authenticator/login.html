@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <br><br><br>
+    {% if user.is_authenticated %}
+      You are already looged in.
+    {% else %}
+    <form action="{%url 'auth:check' %}" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="username" value=""></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" value=""></td>
+        </tr>
+      </table>
+      {% if next %}
+    <input type="hidden" name="next" value="{{ next }}">
+      {% endif %}
+    <input type="submit" value="Login">
+  </form>
+    {% endif %}
+  <br>
+  Diese Webseite verwendet Cookies und Javascript.<br>
+  Bitte beides ggf. zu enablen. <br>
+  Volle Funktionalität ist leider zur Zeit nur im Firefox-Browser gegeben. <br>
+  
+
+  </body>
+</html>

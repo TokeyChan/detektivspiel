@@ -1,0 +1,488 @@
+html {
+  height:100%;
+}
+body {
+  background-color:#000000;
+  margin:0;
+  height:100%;
+}
+
+#old_but_gold {
+  position: absolute;
+  top: 410px;
+  left: 275px;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+}
+
+#bank {
+  position: absolute;
+  top: 375px;
+  left: 700px;
+  width: 200px;
+  height: 120px;
+  cursor:pointer;
+}
+
+#cafe {
+  position: absolute;
+  cursor: pointer;
+  top: 87px;
+  left: 679px;
+  width: 100px;
+  height: 65px;
+  transform: rotate(48deg);
+}
+
+#park {
+  position: absolute;;
+  cursor: pointer;
+  top: 650px;
+  left: 600px;
+  width: 300px;
+  height: 130px;
+}
+
+#twoinone {
+  position: absolute;;
+  cursor: pointer;
+  top: 65px;
+  left: 910px;
+  width: 120px;
+  height: 135px;
+}
+
+#main_container {
+  margin: auto;
+  position: relative;
+  width: 1240px;
+  height: 800px;
+  overflow: hidden;
+  -webkit-transform-style: flat;
+}
+#map_container {
+  margin: auto;
+  position: absolute;
+  width: 1050px;
+  height: 650px;
+  background: black;
+}
+
+.img {
+  position: absolute;
+  overflow: visible;
+  -webkit-background-size: 100%;
+  display: inline;
+}
+
+#metal {
+  background-image: url("/static/game/images/iron.png");
+  z-index: 12;
+  width:
+  267.04px;
+  height: 800px;
+  transform: translateX(968px) translateY(-32px);
+}
+#note {
+  background-image: url("/static/game/images/note.png");
+  z-index: 16;
+  width: 295px;
+  height: 110px;
+  transform: translateX(0px) translateY(0px);
+}
+#map {
+  background-image: url("/static/game/images/map.jpg");
+  z-index: 6;
+  width: 1172px;
+  height: 787px;
+  transform: translateX(5px) translateY(6px);
+  cursor: move;
+}
+#wood {
+  background-image: url("/static/game/images/wood.png");
+  z-index: 8;
+  width: 1240px;
+  height: 230.47px;
+  transform: translateX(0px) translateY(592px);
+}
+#knife {
+  background-image: url("/static/game/images/knife.png");
+  z-index: 27;
+  width: 185px;
+  height: 132px;
+  transform: translateX(26px) translateY(646px);
+  cursor: pointer;
+}
+#high_heels {
+  background-image: url("/static/game/images/high_heels.png");
+  z-index: 26;
+  width: 138px;
+  height: 132px;
+  transform: translateX(280px) translateY(646px);
+  cursor: pointer;
+}
+#phone {
+  background-image: url("/static/game/images/phone.png");
+  z-index: 25;
+  width: 121px;
+  height: 132px;
+  transform: translateX(467px) translateY(646px);
+  cursor: pointer;
+}
+/*
+#lupe {
+  background-image: url("/static/game/images/lupe.png");
+  z-index: 10;
+  width: 131px;
+  height: 127px;
+  transform: translateX(699px) translateY(651px);
+}
+*/
+
+#bars {
+  cursor: pointer;
+  border: 0px none rgb(0, 0, 0); background-image: url("/static/game/images/bars.png");
+  z-index: 9;
+  width: 151px;
+  height: 133px;
+  transform: translateX(770px) translateY(651px);
+}
+#note_text {
+  transform-origin: 61% 51%;
+  transform: translateX(110px) translateY(33px) rotate(361deg) rotateY(0deg);
+  position: absolute;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  word-wrap: break-word;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 28;
+}
+
+.silhouette {
+  background-image: url("/static/game/images/double_silhouette.png");
+  width: 192px;
+  height: 162px;
+  z-index: 24;
+}
+
+.person {
+  width: 192px;
+  height: 162px;
+  z-index: 24;
+}
+
+#felix {
+  background-image: url("/static/game/images/felix.png");
+  transform: translateX(1027px) translateY(-16px);
+  cursor: pointer;
+}
+#julian {
+  background-image: url("/static/game/images/julian.png");
+  transform: translateX(1027px) translateY(125px);
+  cursor: pointer;
+}
+#sophia {
+  background-image: url("/static/game/images/sophia.png");
+  transform: translateX(1027px) translateY(261px);
+  cursor: pointer;
+}
+#stripper {
+  background-image: url("/static/game/images/stripper.png");
+  transform: translateX(1027px) translateY(400px);
+  cursor: pointer;
+}
+#honey {
+  background-image: url("/static/game/images/honey.png");
+  transform: translateX(1027px) translateY(545px);
+  cursor: pointer;
+}
+
+
+.wall {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  overflow: visible;
+  transform-origin: 50% 50%;
+}
+
+#wall_top {
+  z-index: 15;
+  width: 1240px;
+  height: 10px;
+}
+#wall_left {
+  z-index: 17;
+  width: 10px;
+  height: 800px;
+}
+#wall_right {
+  z-index: 19;
+  width: 10px;
+  height: 800px;
+  transform: translateX(1230px);
+}
+#wall_bottom {
+  z-index: 18;
+  width: 1240px;
+  height: 10px;
+  transform: translateY(790px);
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+#item_popup {
+  display: none;
+  z-index: 30;
+  margin: auto;
+  position: absolute;
+  width: 1240px;
+  height: 800px;
+  overflow: hidden;
+  -webkit-transform-style: flat;
+}
+
+#popup_background {
+  pointer-events: auto;
+  position: absolute;
+  background-image: url("/static/game/images/popup.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 679px; height: 679px;
+  transform-origin: 50% 50%;
+  transform: translateX(280px) translateY(60px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+.popup_image {
+  pointer-events: auto;
+  position: absolute;
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  display: inline;
+  transform-origin: 50% 50%;
+  transform: translateX(547px) translateY(215px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+  display: none;
+}
+#popup_knife {
+  background-image: url("/static/game/images/knife.png");
+  width: 205px;
+  height: 152px;
+}
+#popup_high_heels {
+  width: 193px;
+  height: 185px;
+  background-image: url("/static/game/images/high_heels.png");
+}
+#popup_phone {
+  width: 181px;
+  height: 192px;
+  background-image: url("/static/game/images/phone.png");
+}
+
+#popup_title {
+  pointer-events: auto;
+  position: absolute;
+  color: rgb(206, 206, 206);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  word-wrap: break-word;
+  text-align: center;
+  width: 471px;
+  height: 34px;
+  transform-origin: 50% 50%;
+  transform: translateX(385px) translateY(99px) rotateY(0deg);
+}
+
+#popup_text {
+  pointer-events: auto;
+  position: absolute;
+  color: rgb(206, 206, 206);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 21px;
+  line-height: 31px;
+  word-wrap: break-word;
+  overflow: visible;
+  width: 608px;
+  height: 272px;
+  transform-origin: 50% 50%;
+  transform: translateX(317px) translateY(408px) rotateY(0deg);
+}
+
+#popup_button, #chats_button {
+  display: none;
+  position: absolute;
+  top: 640px;
+  left: 525px;
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(206, 206, 206);
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  border-color: black;
+  cursor: pointer;
+}
+
+
+.popup_close {
+  position: absolute;
+  cursor: pointer;
+  top: 80px;
+  left: 900px;
+  width: 35px;
+  height: 40px;
+}
+
+/*
+#insp_popup_background {
+  position: absolute;
+  background-image: url("/static/game/images/popup.png");
+  overflow: visible;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 678px;
+  height: 678px;
+  transform-origin: 50% 50%;
+  transform: translateX(281px) translateY(61px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+#insp_titel {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, &quot;Times New Roman&quot;, serif;
+  font-size: 36px;
+  word-wrap: break-word;
+  overflow: visible;
+  text-align: center;
+  width: 572px;
+  height: 39px;
+  transform-origin: 50% 50%;
+  transform: translateX(326px) translateY(99px) rotateY(0deg);
+}
+
+#insp_text {
+  position: absolute;
+  color: rgb(206, 206, 206);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 31px;
+  word-wrap: break-word;
+  width: 325px;
+  height: 489px;
+  transform-origin: 50% 50%;
+  transform: translateX(327px) translateY(195px) rotateY(0deg);
+}
+
+#insp_img {
+  position: absolute;
+  background-image: url("/static/game/images/inspektor.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 329px;
+  height: 474px;
+  transform-origin: 50% 50%;
+  transform: translateX(618px) translateY(236px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}*/
+
+#overlay_iframe, #overview_iframe {
+  position: absolute;
+  height: 535px;
+  width: 275px;
+  top: 120px;
+  left: 480px;
+}
+
+#chats_container {
+  display: none;
+  position: absolute;
+  overflow: scroll;
+  border: none;
+  height: 450px;
+  width: 275px;
+  top: 170px;
+  left: 488px;
+}
+
+#overlay_iframe {
+  display: none;
+}
+
+#phone_border {
+  position: absolute;
+  background-image: url("/static/game/images/phone_border.png");
+  top: 90px;
+  left: 430px;
+  overflow: visible;
+  -webkit-background-size: 100%;
+  display: inline;
+  width: 345px;
+  height: 649px;
+  transform-origin: 50% 50%;
+}
+
+#phone_close {
+  position: absolute;
+  width: 43px;
+  height: 40px;
+  top: 650px;
+  left: 600px;
+  cursor: pointer;
+}
+
+#phone_container {
+  display: none;
+}
+
+#felix_chat {
+  top: 200px;
+}
+#julian_chat {
+  top: 340px;
+}
+#stripper_chat {
+  top: 270px;
+}
+#sophia_chat {
+  top: 410px;
+}
+#back_chat {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 150px;
+  left: 495px;
+  cursor: pointer;
+}
+
+.chat {
+  left: 490px;
+  width: 270px;
+  height: 70px;
+  position: absolute;
+  cursor: pointer;
+}

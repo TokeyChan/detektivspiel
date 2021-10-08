@@ -1,0 +1,223 @@
+html {
+  height:100%;
+}
+body {
+  background-color:#000000;
+  margin:0;
+  height:100%;
+}
+
+.wall {
+  pointer-events: auto;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  overflow: visible;
+  z-index: 46;
+  transform-origin: 50% 50%;
+}
+
+#wall_bottom {
+   width: 1240px;
+   height: 10px;
+   transform: translateY(790px);
+}
+#wall_left {
+  width: 10px;
+  height: 800px;
+}
+#wall_right {
+  width: 10px;
+  height: 800px;
+  transform: translateX(1230px);
+}
+#wall_top {
+  width: 1240px;
+  height: 10px;
+}
+
+#note {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("/static/game/images/note.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  z-index: 40;
+  display: inline;
+  width: 295px;
+  height: 110px;
+  transform-origin: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
+
+#note_text {
+  cursor: pointer;
+  transform-origin: 61% 51%;
+  transform: translateX(101px) translateY(33px) rotate(361deg);
+  position: absolute;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  word-wrap: break-word;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 40;
+}
+
+.dimmer {
+  pointer-events: auto;
+  position: absolute;
+  border: 0px none rgb(216, 221, 228);
+  opacity: 0.4;
+  background-color: rgb(0, 0, 0);
+  overflow: visible;
+  z-index: 21;
+  width: 248px;
+  height: 798px;
+  transform-origin: 50% 50%;
+}
+
+.dimmer:hover {
+  opacity: 0;
+}
+
+#felix_dimmer {
+  transform: translateX(10px);
+}
+#sophia_dimmer {
+  transform: translateX(258px);
+}
+#julian_dimmer {
+  transform: translateX(506px);
+}
+#stripper_dimmer {
+  transform: translateX(754px);
+}
+#honey_dimmer {
+  transform: translateX(1002px);
+}
+
+.img {
+  position: absolute;
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  display: inline;
+  transform-origin: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
+#felix_img {
+  background-image: url("/static/game/images/felix_long.jpg");
+  width: 248px;
+  height: 800px;
+  transform: translateX(10px);
+}
+#sophia_img {
+  background-image: url("/static/game/images/sophia_long.jpg");
+  width: 248px;
+  height: 800px;
+  transform: translateX(258px);
+}
+#julian_img {
+  background-image: url("/static/game/images/julian_long.jpg");
+  width: 248px;
+  height: 800px;
+  transform: translateX(506px);
+}
+#stripper_img {
+  background-image: url("/static/game/images/stripper_long.jpg");
+  width: 248px;
+  height: 800px;
+  transform: translateX(754px);
+}
+#honey_img {
+  background-image: url("/static/game/images/honey_long.jpg");
+  width: 248px;
+  height: 800px;
+  transform: translateX(1002px);
+}
+
+.bar {
+  pointer-events: auto;
+  position: absolute;
+  /*border: 1px solid rgb(216, 221, 228);*/
+  background-color: rgb(0, 0, 0);
+  overflow: visible;
+  width: 11px;
+  height: 783px;
+  transform-origin: 50% 50%;
+  transform: translateX(0px) translateY(3px) rotateY(0deg);
+}
+.bar_container {
+  display: none;
+  pointer-events: auto;
+  position: absolute;
+  overflow: visible;
+  z-index: 17;
+  width: 214px;
+  height: 788px;
+  transform-origin: 50% 50%;
+}
+#felix_bars {
+  transform: translateX(26px) translateY(7px);
+}
+#sophia_bars {
+  transform: translateX(276px) translateY(7px);
+}
+#julian_bars {
+  transform: translateX(525px) translateY(7px);
+}
+#stripper_bars {
+  transform: translateX(770px) translateY(7px);
+}
+#honey_bars {
+  transform: translateX(1015px) translateY(7px);
+}
+
+.continue_button {
+  position: absolute;
+  z-index: 1;
+  padding: 6px;
+  -webkit-user-select: none;
+  background-image: url("/static/game/images/holz_button.png");
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  word-wrap: break-word;
+  line-height: 37px;
+  display: inline;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  overflow: visible;
+  width: 146px;
+  height: 47px;
+  transform-origin: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
+
+#felix_button {
+  display: none;
+}
+#sophia_button {
+  transform: translateX(248px);
+  display: none;
+}
+#julian_button  {
+  transform: translateX(496px);
+  display: none;
+}
+#stripper_button {
+  transform: translateX(744px);
+  display: none;
+}
+#honey_button {
+  transform: translateX(985px);
+  display: none;
+}

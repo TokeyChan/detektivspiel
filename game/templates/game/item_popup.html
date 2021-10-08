@@ -1,0 +1,34 @@
+<div id="item_popup">
+    <div id="popup_background"></div>
+    <div id="popup_knife" class="popup_image"></div>
+    <div id="popup_high_heels" class="popup_image"></div>
+    <div id="popup_phone" class="popup_image"></div>
+    <div id="popup_title">
+      TITEL
+    </div>
+    <div id="popup_text">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    </div>
+    <input type="button" id="popup_button" name="" value="">
+    {% if phone.is_examined %}
+    <div id="phone_container">
+      <iframe id="overview_iframe" src="/static/game/images/chats_overview.jpg" scrolling="no" seamless></iframe>
+      <div id="chats_container">
+        <img id="chats_img" src="/static/game/images/felix_chat.png" width="100%"></img>
+      </div>
+      <iframe id="overlay_iframe" scrolling="no"></iframe>
+      <div id="phone_border"></div>
+      <div id="phone_close"></div>
+      <div id="chat_chooser" style="width: 100%; height: 100%;">
+        <div id="felix_chat" class="chat"></div>
+        <div id="julian_chat" class="chat"></div>
+        <div id="stripper_chat" class="chat"></div>
+        <div id="sophia_chat" class="chat"></div>
+      </div>
+
+      <div id="back_chat"></div>
+
+      </div>
+    {% endif %}
+    <div id="item_close" class="popup_close"></div>
+</div>

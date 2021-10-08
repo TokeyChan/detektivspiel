@@ -1,0 +1,166 @@
+html {
+  height:100%;
+}
+
+body {
+  background-color:#000000;
+  margin 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#main_container {
+  margin: auto;
+  position: relative;
+  width: 1240px;
+  height: 800px;
+  overflow: hidden;
+  -webkit-transform-style: flat;
+}
+
+.dimmer {
+  position: absolute;
+  opacity: 0.25;
+  background-color: rgb(0, 0, 0);
+  overflow: visible;
+  transform-origin: 50% 50%;
+}
+#dimmer_left {
+  z-index: 16;
+  width: 616px;
+  height: 778px;
+  transform: translateX(4px) translateY(10px) rotateY(0deg);
+}
+
+#dimmer_right {
+  z-index: 17;
+  width: 617px;
+  height: 778px;
+  transform: translateX(620px) translateY(10px);
+}
+
+#dimmer_whole {
+  z-index: 18;
+  width: 1233;
+  height: 778px;
+  transform: translateX(4px) translateY(10px);
+}
+
+
+.dimmer:hover{
+  opacity: 0;
+}
+
+#place_name {
+  transform-origin: 61% 51%;
+  transform: translateX(35px) translateY(34px) rotate(361deg) rotateY(0deg);
+  position: absolute;
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  word-wrap: break-word;
+  overflow: visible;
+  z-index: 21;
+  text-align: center;
+  width: 250px; height: 27px;
+}
+
+.person_name {
+  position: absolute;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  display: inline;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 36px;
+  word-wrap: break-word;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 23;
+  transform-origin: 50% 50%;
+}
+#person1_name {
+  transform: translateX(155px) translateY(600px);
+}
+#person2_name {
+  transform: translateX(855px) translateY(600px);
+}
+#single_person_name {
+  transform: translateX(500px) translateY(600px);
+}
+
+#wall_top {
+  z-index: 25;
+  width: 1240px;
+  height: 10px;
+}
+#wall_left {
+  z-index: 25;
+  width: 10px;
+  height: 800px;
+}
+#wall_right {
+  z-index: 25;
+  width: 10px;
+  height: 800px;
+  transform: translateX(1230px);
+}
+#wall_bottom {
+  z-index: 25;
+  width: 1240px;
+  height: 10px;
+  transform: translateY(790px);
+}
+
+.wall {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  overflow: visible;
+  transform-origin: 50% 50%;
+}
+
+#note {
+  position: absolute;
+  background-image: url("/static/game/images/note.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  z-index: 19; display:
+  inline; width: 295px;
+  height: 110px;
+  transform-origin: 50% 50%;
+  transform: translateX(0px) translateY(0px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+#background {
+  position: absolute;
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  z-index: 15;
+  display: inline;
+  width: 1240px;
+  height: 800px;
+  transform-origin: 50% 50%;
+  transform: translateX(0px) translateY(0px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+}
+
+#map {
+  position: absolute;
+  background-image: url("/static/game/images/back_map.png");
+  overflow: visible;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  z-index: 18;
+  display: inline;
+  width: 162px;
+  height: 116px;
+  transform-origin: 50% 50%;
+  transform: translateX(1062px) translateY(16px) rotateY(0deg);
+  background-repeat: no-repeat no-repeat;
+  cursor: pointer;
+}

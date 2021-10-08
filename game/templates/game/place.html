@@ -1,0 +1,94 @@
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Places</title>
+		<link rel="stylesheet" href="{% static 'game/place.css' %}">
+		<link rel="stylesheet" href="{% static 'game/video.css' %}">
+  </head>
+  <body>
+	<div id="main_container">
+        <div class="wall" id="wall_left"></div>
+        <div class="wall" id="wall_top"></div>
+        <div class="wall" id="wall_bottom"></div>
+        <div class="wall" id="wall_right"></div>
+
+				{% include 'game/videopopup.html' %}
+
+				<div id="place_name">
+					{{ place.display_name }}
+				</div>
+
+				{% if place.person_set.all|length == 2 %}
+					{% if setup_finished %}
+						{% if place.name == 'twoinone'%}
+						{% if met_honey == True %}
+							<div id="dimmer_left" class="dimmer" data-personid="{{ place.person_set.all.1.id }}"></div>
+						{% else %}
+							<div id="dimmer_left" class="dimmer" style="opacity: 1"></div>
+						{% endif %}
+						<div id="dimmer_right" class="dimmer" data-personid="{{ place.person_set.all.0.id }}"></div>
+						{% elif place.name == "old_but_gold" %}
+							<div id="dimmer_left" class="dimmer" data-personid="{{ place.person_set.all.0.id }}"></div>
+							{% if met_sophia %}
+								<div id="dimmer_right" class="dimmer" data-personid="{{ place.person_set.all.1.id }}"></div>
+							{% else %}
+								<div id="dimmer_right" class="dimmer" style="opacity: 1"></div>
+							{% endif %}
+						{% else %}
+						<div id="dimmer_left" class="dimmer" data-personid="{{ place.person_set.all.0.id }}"></div>
+						<div id="dimmer_right" class="dimmer" data-personid="{{ place.person_set.all.1.id }}"></div>
+						{% endif %}
+					{% endif %}
+
+	        <div class="person_name" id="person1_name">
+					{% if place.name == 'twoinone' %}
+						{% if met_honey == True %}
+          		{{ place.person_set.all.1.name }}
+						{% endif %}
+					{% else %}
+						{{ place.person_set.all.0.name }}
+					{% endif %}
+
+	        </div>
+	        <div class="person_name" id="person2_name">
+					{% if place.name == 'twoinone' %}
+          	{{ place.person_set.all.0.name }}
+					{% elif place.name == 'old_but_gold' %}
+						{% if met_sophia == True %}
+							{{ place.person_set.all.1.name }}
+						{% endif %}
+					{% else %}
+						{{ place.person_set.all.1.name }}
+					{% endif %}
+	        </div>
+
+				{% else %}
+					{% if setup_finished %}
+					<div id="dimmer_whole" class="dimmer" data-personid="{{ place.person_set.all.0.id }}"></div>
+					{% endif %}
+					<div class="person_name" id="single_person_name">
+						{{ place.person_set.all.0.name }}
+					</div>
+
+
+				{% endif %}
+
+
+        <div id="note"></div>
+        <div id="background" style="background-image: url('/static/game/backgrounds/{{ place.background_img }}');"></div>
+        <div id="map"></div>
+
+				{% include 'game/insp_popup.html' %}
+  </div>
+
+<form action="{% url 'game:index' %}" method="get">
+<input id="back_to_map" type="submit" hidden="true">
+</form>
+
+
+
+<script type="text/javascript" src="{% static 'game/place.js' %}"></script>
+
+</body>
+</html>
